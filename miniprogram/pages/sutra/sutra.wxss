@@ -1,0 +1,77 @@
+.sutra-container {
+  padding: 30rpx;
+  background: #f9f6f2;
+  min-height: 100vh;
+  box-sizing: border-box;
+  padding-top: calc(
+    88rpx + env(safe-area-inset-top)
+  ); /* 适配不同机型顶部安全距离 */
+}
+
+.sutra-content {
+  font-size: 32rpx;
+  line-height: 2;
+  color: #2c3e50;
+  padding-bottom: 120rpx;
+  letter-spacing: 2rpx;
+}
+
+.paragraph {
+  margin-bottom: 40rpx;
+  transition: all 0.3s ease;
+  background: rgba(255, 255, 255, 0.7);
+  padding: 30rpx;
+  border-radius: 16rpx;
+  box-shadow: 0 2rpx 8rpx rgba(0, 0, 0, 0.05);
+}
+
+.hide {
+  opacity: 0;
+  height: 0;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.guide-text {
+  position: fixed;
+  bottom: 40rpx;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  color: #666;
+  font-size: 24rpx;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 16rpx 32rpx;
+  border-radius: 30rpx;
+  box-shadow: 0 4rpx 12rpx rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8rpx;
+}
+
+.guide-icon {
+  width: 16rpx;
+  height: 16rpx;
+  border-top: 4rpx solid #666;
+  border-right: 4rpx solid #666;
+  transform: rotate(-45deg);
+  margin-bottom: 8rpx;
+  animation: bounce 1.5s infinite;
+}
+
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateY(0) rotate(-45deg);
+  }
+  50% {
+    transform: translateY(-6rpx) rotate(-45deg);
+  }
+}

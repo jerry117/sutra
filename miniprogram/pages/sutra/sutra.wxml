@@ -1,0 +1,14 @@
+<navigation-bar title="金刚经" back="{{true}}" homeButton="{{false}}" />
+<view class="sutra-container">
+  <view class="sutra-content">
+    <block wx:for="{{content}}" wx:key="index">
+      <view class="paragraph {{index <= currentIndex ? 'show' : 'hide'}}">
+        {{item}}
+      </view>
+    </block>
+  </view>
+  <view class="guide-text {{isFinished ? 'hide' : ''}}">
+    <view class="guide-icon"></view>
+    <text>向上滑动继续阅读</text>
+  </view>
+</view>
