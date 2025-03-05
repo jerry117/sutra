@@ -6,40 +6,56 @@ page {
   min-height: 100vh;
 }
 
+/* 全局样式 */
 .container {
-  padding: 30rpx 20rpx;
+  padding: 20rpx;
+  padding-top: calc(88rpx + env(safe-area-inset-top)); /* 适配导航栏高度 */
+  box-sizing: border-box;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.scriptures-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20rpx;
 }
 
 /* 经典列表的样式 */
 .scripture-item {
-  background: linear-gradient(145deg, #ffffff, #f8f9fa);
-  border-radius: 20rpx;
-  margin-bottom: 30rpx;
-  padding: 30rpx;
+  background: #fff;
+  border-radius: 16rpx;
+  padding: 20rpx;
+  margin-bottom: 20rpx; /* 减少条目之间的间距 */
+  box-shadow: 0 2rpx 8rpx rgba(0, 0, 0, 0.1);
+  position: relative;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  box-shadow: 0 4rpx 12rpx rgba(0, 0, 0, 0.08);
-  transition: all 0.3s ease;
-  border: 1px solid rgba(255, 255, 255, 0.8);
+  align-items: center;
+  min-height: 200rpx; /* 确保每个条目有足够高度 */
 }
 
 .scripture-item:active {
   transform: scale(0.98);
 }
 
-.scripture-name {
-  font-size: 36rpx;
-  font-weight: 600;
-  color: #2c3e50;
+.scripture-info {
+  text-align: center;
   margin-bottom: 16rpx;
-  letter-spacing: 0.5rpx;
+}
+
+.scripture-name {
+  font-size: 32rpx; /* 稍微减小字体 */
+  color: #333;
+  margin-bottom: 10rpx; /* 减少内部间距 */
+  font-weight: 500;
 }
 
 .scripture-stats {
-  font-size: 26rpx;
-  color: #5a6c7d;
-  margin-bottom: 20rpx;
+  font-size: 28rpx;
+  color: #666;
+  margin-bottom: 16rpx;
   display: flex;
   gap: 30rpx;
 }
@@ -127,38 +143,60 @@ button:active {
   align-items: center;
   justify-content: center;
   height: 100vh;
-  background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
-  padding: 40rpx;
 }
 
 .avatar-placeholder {
-  width: 160rpx;
-  height: 160rpx;
+  width: 200rpx;
+  height: 200rpx;
   border-radius: 50%;
-  margin-bottom: 40rpx;
+  margin-bottom: 20rpx;
   background: #fff;
   box-shadow: 0 8rpx 16rpx rgba(0, 0, 0, 0.1);
 }
 
 .login-tips {
   font-size: 32rpx;
-  color: #2c3e50;
-  margin-bottom: 60rpx;
+  color: #666;
+  margin-bottom: 20rpx;
   font-weight: 500;
 }
 
 .login-button {
-  background: linear-gradient(135deg, #4caf50, #45a049);
-  color: white;
+  background: #1aad19;
+  color: #fff;
+  border: none;
   border-radius: 50rpx;
   padding: 20rpx 60rpx;
   font-size: 32rpx;
-  border: none;
-  box-shadow: 0 8rpx 16rpx rgba(76, 175, 80, 0.3);
+  box-shadow: 0 8rpx 16rpx rgba(26, 173, 25, 0.3);
   transition: all 0.3s ease;
 }
 
 .login-button:active {
   transform: translateY(2rpx);
-  box-shadow: 0 4rpx 8rpx rgba(76, 175, 80, 0.2);
+  box-shadow: 0 4rpx 8rpx rgba(26, 173, 25, 0.2);
+}
+
+/* 阅读按钮样式 */
+.read-button {
+  background: #1aad19;
+  color: #fff;
+  border: none;
+  border-radius: 40rpx;
+  padding: 15rpx 30rpx; /* 减少按钮padding */
+  font-size: 28rpx; /* 稍微减小按钮字体 */
+  box-shadow: 0 4rpx 8rpx rgba(26, 173, 25, 0.2);
+  transition: all 0.3s ease;
+  margin: 0; /* 移除按钮默认margin */
+  width: 200rpx; /* 设置按钮宽度 */
+  text-align: center;
+  min-width: 160rpx; /* 设置最小宽度 */
+  line-height: 2; /* 调整行高 */
+  margin-top: auto; /* 将按钮推到底部 */
+  align-self: center; /* 居中按钮 */
+}
+
+.read-button:active {
+  transform: translateY(2rpx);
+  box-shadow: 0 2rpx 4rpx rgba(26, 173, 25, 0.1);
 }

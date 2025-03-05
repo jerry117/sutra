@@ -100,6 +100,14 @@ Component({
         })
       }
       this.triggerEvent('back', { delta: data.delta }, {})
+    },
+    goBack() {
+      wx.navigateBack();
+    },
+    goHome() {
+      wx.reLaunch({
+        url: '/pages/index/index'
+      });
     }
   },
 })

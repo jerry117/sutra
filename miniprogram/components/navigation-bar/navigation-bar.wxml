@@ -62,3 +62,11 @@
     </view>
   </view>
 </view>
+
+<view class="navigation-bar">
+  <view class="left">
+    <button wx:if="{{back}}" bindtap="goBack">返回</button>
+    <button wx:if="{{homeButton}}" bindtap="goHome">首页</button>
+  </view>
+  <view class="title">{{title}}</view>
+</view>

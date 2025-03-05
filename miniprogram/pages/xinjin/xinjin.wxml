@@ -1,0 +1,10 @@
+<navigation-bar title="心经" back="{{true}}" homeButton="{{false}}" />
+<scroll-view class="sutra-container" scroll-y="true">
+  <view class="sutra-content">
+    {{content}}
+  </view>
+  <view class="finish-button-container">
+    <button class="finish-button" bindtap="markAsFinished">颂经功德+1</button>
+    <text class="today-count">今日颂经：{{todayCount}} 遍</text>
+  </view>
+</scroll-view>

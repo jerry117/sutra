@@ -1,0 +1,25 @@
+{
+  "description": "A WeChat Mini Program for daily scripture reading",
+  "appid": "your-app-id",
+  "projectname": "sutra",
+  "miniprogramRoot": "miniprogram/",
+  "cloudfunctionRoot": "cloudfunctions/",
+  "compileType": "miniprogram",
+  "libVersion": "2.14.0",
+  "srcMiniprogramRoot": "miniprogram/",
+  "srcCloudfunctionRoot": "cloudfunctions/",
+  "setting": {
+    "urlCheck": true,
+    "es6": true,
+    "enhance": true,
+    "postcss": true,
+    "minified": true,
+    "newFeature": true
+  },
+  "condition": {
+    "miniprogram": {
+      "current": -1,
+      "list": []
+    }
+  }
+}

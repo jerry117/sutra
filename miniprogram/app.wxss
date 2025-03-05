@@ -1,10 +1,20 @@
 /**app.wxss**/
+
+/* 全局样式 */
+page {
+  background-color: #f0f2f5;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif;
+  min-height: 100vh;
+}
+
 .container {
-  height: 100%;
+  padding: 20rpx;
+  padding-top: calc(88rpx + env(safe-area-inset-top)); /* 适配导航栏高度 */
+  box-sizing: border-box;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  padding: 200rpx 0;
-  box-sizing: border-box;
-} 
+}
