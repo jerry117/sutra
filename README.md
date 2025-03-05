@@ -6,7 +6,6 @@
 
 ![首页预览](miniprogram/images/preview/home.png)
 
-_注：需要在 miniprogram/images/preview 目录下添加首页截图_
 
 ## 功能特点
 
@@ -25,7 +24,7 @@ _注：需要在 miniprogram/images/preview 目录下添加首页截图_
 
 1. 克隆仓库
 ```bash
-git clone https://github.com/yourusername/sutra.git
+git clone https://github.com/jerry117/sutra.git
 ```
 
 2. 在微信开发者工具中打开项目
