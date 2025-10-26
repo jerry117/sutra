@@ -23,6 +23,7 @@ yarn-error.log*
 .vscode/
 *.swp
 *.swo
+.claude/
 
 # WeChat Dev Tools
 project.private.config.json
