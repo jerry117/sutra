@@ -6,11 +6,6 @@
     "useCompilerPlugins": [
       "typescript"
     ],
-    "babelSetting": {
-      "ignore": [],
-      "disablePlugins": [],
-      "outputPath": ""
-    },
     "coverView": false,
     "postcss": false,
     "minified": true,

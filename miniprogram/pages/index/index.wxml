@@ -1,18 +1,11 @@
-<navigation-bar title="每日功课" back="{{false}}" homeButton="{{false}}" />
-<view wx:if="{{!isLogin}}" class="login-container">
-  <image class="avatar-placeholder" src="/images/avatar-placeholder.png"></image>
-  <text class="login-tips">请登录后继续使用</text>
-  <button class="login-button" open-type="getUserInfo" bindtap="handleLogin">
-    微信登录
-  </button>
-</view>
-<view wx:else class="container">
+<view class="container">
   <view class="scriptures-list">
     <view wx:for="{{scriptures}}" wx:key="name" class="scripture-item">
       <view class="scripture-info">
         <view class="scripture-name">{{item.name}}</view>
         <view class="scripture-stats">
-          <text>总计: {{item.total}}</text>
+          <text>今日: {{item.count || 0}}</text>
+          <text>总计: {{item.total || 0}}</text>
         </view>
       </view>
       <button wx:if="{{index === 0}}" bindtap="goToXinjin" class="read-button">
